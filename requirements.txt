@@ -1,4 +1,36 @@
-Django>=5.0,<6.0
+# ============================================================
+# requirements.txt - Sistema de Monitoreo Planta San Miguel
+# ============================================================
+#
+# INSTALACION:
+#   py -m pip install -r requirements.txt
+#
+# VERIFICACION:
+#   py -m pip check
+#   py -m pip list
+#
+# ENTORNO RECOMENDADO EN WINDOWS:
+#   py -m venv .venv
+#   .venv\Scripts\activate
+#   py -m pip install -r requirements.txt
+#
+# ============================================================
+
+# --- Framework web principal ---
+# Django 5.2 LTS: version estable con soporte extendido actual.
+# Provee ORM, vistas, templates, URLs y servidor de desarrollo.
+Django>=5.2,<6.0
+
+# --- Conector PostgreSQL ---
+# psycopg2-binary: adaptador PostgreSQL para Python.
+# La variante binary evita compilar desde fuente en desarrollo.
 psycopg2-binary>=2.9,<3.0
+
+# --- Cliente MQTT ---
+# paho-mqtt: cliente MQTT usado para recibir datos del ESP32.
+# La version 2.x mantiene una API moderna y estable para callbacks.
 paho-mqtt>=2.0,<3.0
+
+# --- Variables de entorno ---
+# python-dotenv: carga variables desde .env sin exponer credenciales.
 python-dotenv>=1.0,<2.0
